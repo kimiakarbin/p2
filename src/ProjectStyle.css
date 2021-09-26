@@ -1,0 +1,108 @@
+.main {
+    border: solid;
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
+    padding: 30px;
+    padding-left: 40px;
+}
+
+.projectName {
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+}
+.lable--projectName {
+    padding: 0.5%;
+}
+.projectDate {
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    padding-top: 0%;
+}
+.lable--projectDate {
+    padding: 0.5%;
+}
+
+.projectSnapShot {
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    padding-top: 0%;
+}
+.label--projectSnapShot {
+    padding-right: 0.5%;
+}
+.button {
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    padding-top: 0%;
+}
+
+.button--submit {
+    display: flex;
+    margin-right: 10px;
+}
+
+.button--clear {
+    display: flex;
+    margin-left: 10px;
+}
+
+.all-image1 {
+    display: flex;
+    justify-content: space-around;
+}
+.all-image2 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.picture--border {
+    width: 38%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+    position: relative;
+}
+.img--image {
+    display: flex;
+    margin: 10px;
+    opacity: 1;
+    transition: 0.5s ease;
+    backface-visibility: hidden;
+}
+.Footer--picture {
+    text-align: center;
+    padding: 10px 20px;
+}
+.middle {
+    transition: 0.5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.picture--border:hover .img--image {
+    opacity: 0.3;
+}
+
+.picture--border:hover .middle {
+    opacity: 1;
+}
+.picture--text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+}
+
+.delete--icon {
+    cursor: pointer;
+    position: absolute;
+    top: 80x;
+    right: 16px;
+}
