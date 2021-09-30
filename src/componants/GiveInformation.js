@@ -4,10 +4,11 @@ import { v4 as uuidv4 } from 'uuid';
 function Giveinformation(props) {
     const [input, setInput] = useState('');
     const [date, setDate] = useState();
+    const [link, setLink] = useState();
+    const [image, setImage] = React.useState(null);
 
-    const [myimage, setMyImage] = React.useState(null);
     const uploadImage = (e) => {
-        setMyImage(URL.createObjectURL(e.target.files[0]));
+        setImage(URL.createObjectURL(e.target.files[0]));
     };
 
     const handleSubmit = (e) => {
@@ -16,67 +17,67 @@ function Giveinformation(props) {
             id: uuidv4(),
             text: input,
             date: date,
-            picture: myimage,
+            link: link,
+            picture: image,
         });
 
         setInput('');
         setDate('');
-
-        setMyImage('');
+        setLink('');
+        setImage('');
     };
 
     const onClear = () => {
         setInput('');
         setDate('');
-
-        setMyImage('');
+        setLink('');
+        setImage('');
     };
     return (
         <form className="GiveInformation" onSubmit={handleSubmit}>
             <div className="projectName">
-                <label className="lable--projectName">projectName :</label>
+                <label className="lable-projectName">projectName :</label>
                 <input
+                    className="input-name"
                     type="text"
-                    placeholder="project name"
-                    className="input--name"
                     name="text"
                     value={input}
+                    placeholder="project name"
                     onChange={(event) => setInput(event.target.value)}
                 />
             </div>
 
             <div className="projectDate">
-                <label className="lable--projectDate">projectDate :</label>
+                <label className="lable-projectDate">projectDate :</label>
                 <input
-                    className="input--date"
+                    className="input-date"
                     type="date"
                     name="date"
                     value={date}
                     onChange={(event) => setDate(event.target.value)}
                 />
             </div>
+            <div className="projectLink">
+                <label className="lable-projectLink">projectLink :</label>
+                <input
+                    className="input-Link"
+                    type="text"
+                    name="link"
+                    value={link}
+                    onChange={(event) => setLink(event.target.value)}
+                />
+            </div>
             <div className="projectSnapShot">
-                <label className="label--projectSnapShot">
+                <label className="label-projectSnapShot">
                     ProjectSnapShot :
                 </label>
-                {/* <input
-                    loading="lazy"
-                    type="file"
-                    value={file}
-                    onChange={(event) => setFile(event.target.value)}
-                />
-                 */}
-                <img
-                    src={myimage}
-                    alt="gfd"
-                    style={{ height: 100, width: 100 }}
-                />
+
                 <input type="file" onChange={uploadImage} />
             </div>
 
             <div className="button">
-                <button className="button--submit">SUBMIT</button>
-                <button className="button--clear" onClick={onClear}>
+                <button className="button-submit">SUBMIT</button>
+                <button className="button-clear" onClick={onClear}>
                     CLEAR
                 </button>
             </div>

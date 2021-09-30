@@ -1,0 +1,156 @@
+.main {
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
+    padding: 30px;
+    padding-left: 40px;
+}
+.projectName {
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+}
+.lable-projectName {
+    padding: 0.5%;
+}
+.projectDate {
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    padding-top: 0%;
+}
+.lable-projectDate {
+    padding: 0.5%;
+}
+.projectLink {
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    padding-top: 0%;
+}
+.lable-projectLink {
+    padding: 0.5%;
+}
+.projectSnapShot {
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    padding-top: 0%;
+}
+.label-projectSnapShot {
+    padding-right: 0.5%;
+}
+.button {
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+    padding: 1%;
+    padding-top: 0%;
+}
+.picture {
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 60px;
+
+    position: relative;
+    float: left;
+}
+.image {
+    display: flex;
+    margin: 10px;
+    opacity: 1;
+    transition: 0.5s ease;
+    backface-visibility: hidden;
+    width: 446px;
+    height: 289px;
+}
+.Footer-picture {
+    text-align: center;
+    padding: 10px 20px;
+}
+.onImage {
+    transition: 0.5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.picture:hover .image {
+    opacity: 0.3;
+}
+
+.picture:hover .onImage {
+    opacity: 1;
+}
+.picture--text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+}
+
+.delete--icon {
+    cursor: pointer;
+    position: absolute;
+    top: 80x;
+    right: 16px;
+    margin-right: -230px;
+    margin-top: -205px;
+}
+.noBtn {
+    margin-left: 10px;
+    background-color: crimson;
+}
+.yesBtn {
+    justify-content: space-around;
+    background-color: blue;
+}
+
+.modal-container {
+    position: fixed;
+    margin-left: 9%;
+    width: 50%;
+    height: 30%;
+    border-radius: 13px;
+    background-color: rgb(201, 198, 198);
+    box-shadow: black;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 991px) {
+    .main {
+        width: 80%;
+    }
+    .projectName {
+        flex-direction: column;
+    }
+    .projectDate {
+        flex-direction: column;
+    }
+    .projectLink {
+        flex-direction: column;
+    }
+    .projectSnapShot {
+        flex-direction: column;
+    }
+    .button {
+        flex-direction: column;
+    }
+    .button-submit {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 5px;
+    }
+    .button-clear {
+        display: flex;
+        justify-content: space-around;
+    }
+    .picture {
+        flex-direction: column;
+        margin: 10px 0;
+    }
+}

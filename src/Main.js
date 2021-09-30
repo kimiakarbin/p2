@@ -1,7 +1,6 @@
 import React from 'react';
-import './ProjectStyle.css';
-
-import List from './List';
+import './asests/ProjectStyle.css';
+import List from './componants/List';
 
 function Main() {
     return (
