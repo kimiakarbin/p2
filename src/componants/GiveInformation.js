@@ -10,7 +10,7 @@ function Giveinformation(props) {
     const uploadImage = (e) => {
         setImage(URL.createObjectURL(e.target.files[0]));
     };
-
+    console.log('x');
     const handleSubmit = (e) => {
         e.preventDefault();
         props.onSubmit({
@@ -34,7 +34,7 @@ function Giveinformation(props) {
         setImage('');
     };
     return (
-        <form className="GiveInformation" onSubmit={handleSubmit}>
+        <form className="Information" onSubmit={handleSubmit}>
             <div className="projectName">
                 <label className="lable-projectName">projectName :</label>
                 <input
